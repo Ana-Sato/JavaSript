@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperatura</title>
+    <style>
+        body {
+            font: 20pt Arial;
+        }
+        button {
+            font: 12pt Arial;
+            padding: 20px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+   <h1>Conversor de Temperatura</h1> 
+   <button onclick="converter()">Converter</button>
+   <div id="resp">
+
+   </div>
+   <div id="res">
+
+   </div>
+
+
+
+
+   <script>
+    function converter() {
+        var C = Number(window.prompt('Digite uma distancia em metros (m)'))
+        var resp = document.getElementById('resp')
+        var res = document.getElementById('res')
+        var K = Number(C + 273,15)
+        var F = Number((C*(9/5)) + 32)
+        resp.innerHTML = `<h2>A temperatura de ${C} °C, corresponde a:</h2> `
+        res.innerHTML = `
+        <p>${K} °K (Kelvin)</p>
+        <p>${F} °F (Fahrenheit)</p>
+        `
+        
+    }
+   </script>
+</body>
+</html>
