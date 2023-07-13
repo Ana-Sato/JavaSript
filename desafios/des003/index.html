@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antes e Depois</title>
+    <style>
+        body {
+            font: 12pt Arial;
+        }
+        button {
+            font-size: 12pt;
+            font-weight: bold;
+            padding: 20px;
+            background-color: rgb(212, 109, 226);
+            margin: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Desafio Antes e Depois</h1>
+    <hr>
+    <button onclick="clicou()">Antecessor e Sucessor</button>
+
+
+
+
+    <script>
+        function clicou() {
+        var n1 = Number(window.prompt('Digite um numero inteiro qualquer: ')) 
+        var ant = (n1 - 1)
+        var sus = (n1 + 1)
+        window.confirm(`Antes do ${n1}, temos o numero ${ant}.
+Depois do ${n1}, temos o numero ${sus}.`) 
+        }
+    
+
+    </script>
+</body>
+</html>
